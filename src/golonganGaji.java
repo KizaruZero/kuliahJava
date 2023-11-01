@@ -13,6 +13,16 @@ public class golonganGaji {
         totalGaji = 0;
         System.out.print("Masukan Golongan Gaji anda (1,2,3) = ");
         gaji = userInput.nextInt();
+        if (gaji == 1) {
+            totalGaji = gol1;
+        } else if (gaji == 2) {
+            totalGaji = gol2;
+        } else if (gaji == 3) {
+            totalGaji = gol3;
+        } else {
+            System.out.println("Tidak Valid");
+            System.exit(0);
+        }
         userInput.nextLine();
         System.out.print("Apakah anda sudah berkeluarga ? (Ya/Tidak) = ");
         status = userInput.nextLine();
@@ -20,22 +30,22 @@ public class golonganGaji {
             System.out.print("Masukan total anak anda = ");
             totalAnak = userInput.nextInt();
             totalAnak = Math.min(totalAnak, 3);
-            if (gaji == 1 ) {
-                totalGaji = gol1 + tunjanganKeluarga + tunjanganAnak*totalAnak;
-                System.out.println("Total Gaji anda = " + totalGaji);
+            if (gaji == 1) {
+                totalGaji = totalGaji + tunjanganKeluarga + tunjanganAnak * totalAnak;
+                System.out.println("Total Gaji anda adalah = " + totalGaji);
             } else if (gaji == 2) {
-                totalGaji = gol2 + tunjanganKeluarga + tunjanganAnak*totalAnak;
-                System.out.println("Total Gaji anda = " + totalGaji);
+                totalGaji = totalGaji + tunjanganKeluarga + tunjanganAnak * totalAnak;
+                System.out.println("Total Gaji anda adalah = " + totalGaji);
             } else if (gaji == 3) {
-                totalGaji = (gol3 + tunjanganKeluarga + tunjanganAnak*totalAnak)*98/100;
-                System.out.println("Total Gaji anda = " + totalGaji);
+                totalGaji = (totalGaji + tunjanganKeluarga + tunjanganAnak * totalAnak) * 98 / 100;
+                System.out.println("Total Gaji anda adalah = " + totalGaji);
             }
-        } else if (gaji == 1) {
-            System.out.println("Gaji anda adalah = " + gol1);
-        } else if (gaji == 2) {
-            System.out.println("Gaji anda adalah = " + gol2);
-        } else if (gaji == 3) {
-            System.out.println("Gaji anda adalah = " + gol3*98/100);
+        } else if (status.equals("Tidak") && gaji == 1) {
+            System.out.println("Gaji anda adalah = " + totalGaji);
+        } else if (status.equals("Tidak") && gaji == 2) {
+            System.out.println("Gaji anda adalah = " + totalGaji);
+        } else if (status.equals("Tidak") && gaji == 3) {
+            System.out.println("Gaji anda adalah = " + totalGaji * 98 / 100);
         } else {
             System.out.println("Tidak Valid");
         }
