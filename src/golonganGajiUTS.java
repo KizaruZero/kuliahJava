@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class golonganGaji {
+public class golonganGajiUTS {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
         int gaji, gol1, gol2, gol3, tunjanganAnak, totalAnak, tunjanganKeluarga, totalGaji;

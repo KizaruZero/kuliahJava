@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class menentukanSegitiga {
+public class menentukanSegitigaUTS {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
         double sisi1, sisi2, sisi3;

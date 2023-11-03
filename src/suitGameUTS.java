@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class suitGame {
+public class suitGameUTS {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
         String pilihanPlayer, pilihanBot;
@@ -11,7 +11,7 @@ public class suitGame {
         Random acak = new Random();
         int ambilAcak = acak.nextInt(array.length);
         pilihanBot = array[ambilAcak];
-        System.out.println("Permainan = " + "Pilihan Kamu = " + pilihanPlayer + " VS " + "Pilihan Bot = " + pilihanBot);
+        System.out.println("Permainan = " + "Pilihan Kamu : " + pilihanPlayer + " VS " + "Pilihan Bot : " + pilihanBot);
         if (pilihanPlayer.equals(pilihanBot)) {
             System.out.println("Hasil : Seri");
         } else if (pilihanPlayer.equals("Semut") && pilihanBot.equals("Gajah") ||
