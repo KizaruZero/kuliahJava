@@ -8,7 +8,7 @@ public class diantaraInp {
         angka1 = userInput.nextInt();
         System.out.print("Masukan Angka Kedua = ");
         angka2 = userInput.nextInt();
-        for (;angka1 <= angka2;) {
+        while (angka1 <= angka2) {
             System.out.println("angka "+angka1);
             angka1++;
         }
