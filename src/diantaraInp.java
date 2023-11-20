@@ -12,5 +12,9 @@ public class diantaraInp {
             System.out.println("angka "+angka1);
             angka1++;
         }
+        while (angka1 >= angka2) {
+            System.out.println("angka "+angka1);
+            angka1--;
+        }
     }
 }
